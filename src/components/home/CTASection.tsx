@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const CTASection = () => {
@@ -10,15 +10,18 @@ const CTASection = () => {
             Spremni da pokrenete vaš online biznis?
           </h2>
           <p className="text-lg text-primary-foreground/80 mb-8">
-            Javite nam se danas i dobijte besplatnu konsultaciju. 
-            Saznajte kako možemo pomoći vašem biznisu da raste online.
+            Javite nam se danas i dobijte besplatnu konsultaciju. Saznajte kako
+            možemo pomoći vašem biznisu da raste online.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/kontakt" className="btn-white gap-2">
+            <Link href="/kontakt" className="btn-white gap-2">
               Zatraži ponudu
               <ArrowRight size={18} />
             </Link>
-            <Link to="/paketi" className="inline-flex items-center justify-center px-6 py-3 bg-transparent border-2 border-primary-foreground text-primary-foreground font-semibold rounded-lg transition-all duration-200 hover:bg-primary-foreground hover:text-primary">
+            <Link
+              href="/paketi"
+              className="inline-flex items-center justify-center px-6 py-3 bg-transparent border-2 border-primary-foreground text-primary-foreground font-semibold rounded-lg transition-all duration-200 hover:bg-primary-foreground hover:text-primary"
+            >
               Pogledaj pakete
             </Link>
           </div>
