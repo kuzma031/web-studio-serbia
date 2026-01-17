@@ -41,7 +41,7 @@ export function PricingCard({ pkg, variant = "compact" }: PricingCardProps) {
                   isCompact ? "text-lg" : "text-xl"
                 }`}
               >
-                {pkg.price.price}€
+                {pkg.regularPrice}
               </span>
               <div className="flex items-baseline gap-1">
                 <span
@@ -49,15 +49,9 @@ export function PricingCard({ pkg, variant = "compact" }: PricingCardProps) {
                     isCompact ? "text-4xl" : "text-5xl"
                   }`}
                 >
-                  {pkg.price.discountedPrice}
+                  {pkg.price}
                 </span>
-                <span
-                  className={`text-muted-foreground ${
-                    isCompact ? "" : "text-xl"
-                  }`}
-                >
-                  €
-                </span>
+                <span className="text-sm text-muted-foreground">/godišnje</span>
               </div>
             </div>
           ) : (
@@ -71,11 +65,11 @@ export function PricingCard({ pkg, variant = "compact" }: PricingCardProps) {
           )}
         </div>
         <p className="text-sm text-muted-foreground">{pkg.description}</p>
-        {!isCompact && (
+        {/* {!isCompact && (
           <p className="text-sm text-primary font-medium mt-2">
             Rok izrade: {pkg.timeline}
           </p>
-        )}
+        )} */}
       </div>
 
       <div className="flex-1">

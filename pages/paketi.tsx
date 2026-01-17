@@ -9,23 +9,23 @@ const faqs = [
   {
     question: "Šta je uključeno u cenu?",
     answer:
-      "Cena uključuje kompletnu izradu sajta, dizajn, responzivnost kao i prebacivanje sajta na hosting. Nema skrivenih troškova.",
+      "Cena uključuje kompletnu izradu sajta, dizajn, responzivnost kao i domen i hosting. Nema skrivenih troškova.",
   },
   {
     question: "Koliko traje izrada sajta?",
     answer:
-      "Basic paket završavamo za 2-5 dana, Standard za 7-14 dana. Za Custom projekte vreme izrade zavisi od kompleksnosti.",
+      "Basic paket završavamo za 2-7 dana, Standard za 7-14 dana. Za CMS paket vreme izrade zavisi od kompleksnosti.",
   },
   {
     question: "Mogu li kasnije da dodam nove funkcionalnosti?",
     answer:
       "Naravno! Možete započeti sa Basic paketom i kasnije nadograditi sajt dodatnim funkcionalnostima.",
   },
-  {
-    question: "Šta ako nisam zadovoljan dizajnom?",
-    answer:
-      "Uključene su dve runde revizija dizajna. Radimo dok ne budete potpuno zadovoljni izgledom sajta.",
-  },
+//   {
+//     question: "Šta ako nisam zadovoljan dizajnom?",
+//     answer:
+//       "Uključene su dve runde revizija dizajna. Radimo dok ne budete potpuno zadovoljni izgledom sajta.",
+//   },
 ];
 
 export default function Packages() {

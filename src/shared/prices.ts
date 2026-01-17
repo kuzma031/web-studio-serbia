@@ -1,12 +1,20 @@
 export const prices = {
   basic: {
-    price: 150,
-    discountedPrice: 100,
+    price: 129,
+    // discountedPrice: 99,
+    discountedPrice: 99,
+
   },
   standard: {
-    price: 250,
-    discountedPrice: 200,
+    price: 199,
+    // discountedPrice: 149,
+    discountedPrice: 129,
   },
+  cms: {
+    price: 349,
+    // discountedPrice: 249,
+    discountedPrice: 199,
+  }
   //   custom: 400,
 };
 
