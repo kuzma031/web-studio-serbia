@@ -43,14 +43,14 @@ const Footer = () => {
                   Paketi
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/portfolio"
                   className="text-background/70 hover:text-background text-sm transition-colors"
                 >
                   Portfolio
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href="/kontakt"
