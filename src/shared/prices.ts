@@ -11,7 +11,7 @@ export const prices = {
 };
 
 export const contact = {
-  phone: "+381 64 107 6461",
+  phone: "+381641076461",
   email: "webinoagency@gmail.com",
   address: "Beograd, Srbija",
 };
