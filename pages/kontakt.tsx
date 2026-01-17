@@ -6,12 +6,12 @@ import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { contact, prices } from "@/shared/prices";
 import { PackageType } from "@/shared/packages";
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function Contact() {
   const router = useRouter();
   const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [state, handleSubmit] = useForm("xzdddqrv");
   const [selectedPackage, setSelectedPackage] = useState<string>("");
 
   // Read package from URL query parameter
@@ -24,20 +24,15 @@ export default function Contact() {
     }
   }, [router.isReady, router.query.paket]);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    toast({
-      title: "Poruka poslata!",
-      description: "Hvala vam na interesovanju. Javićemo vam se uskoro.",
-    });
-  };
+  // Show toast when form submission succeeds
+  useEffect(() => {
+    if (state.succeeded) {
+      toast({
+        title: "Poruka poslata!",
+        description: "Hvala vam na interesovanju. Javićemo vam se uskoro.",
+      });
+    }
+  }, [state.succeeded, toast]);
 
   return (
     <>
@@ -68,7 +63,7 @@ export default function Contact() {
               <div>
                 <h2 className="text-2xl font-bold mb-6">Pošaljite upit</h2>
 
-                {isSubmitted ? (
+                {state.succeeded ? (
                   <div className="card-elevated p-8 text-center">
                     <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                       <CheckCircle size={32} className="text-primary" />
@@ -89,15 +84,21 @@ export default function Contact() {
                         >
                           Ime i prezime *
                         </label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          required
-                          className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
-                          placeholder="Vaše ime"
-                        />
-                      </div>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+                        placeholder="Vaše ime"
+                      />
+                      <ValidationError
+                        prefix="Ime"
+                        field="name"
+                        errors={state.errors}
+                        className="text-sm text-red-500 mt-1"
+                      />
+                    </div>
                       <div>
                         <label
                           htmlFor="phone"
@@ -129,6 +130,12 @@ export default function Contact() {
                         required
                         className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
                         placeholder="vas@email.com"
+                      />
+                      <ValidationError
+                        prefix="Email"
+                        field="email"
+                        errors={state.errors}
+                        className="text-sm text-red-500 mt-1"
                       />
                     </div>
 
@@ -198,14 +205,20 @@ export default function Contact() {
                         className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none"
                         placeholder="Opišite šta vam je potrebno..."
                       />
+                      <ValidationError
+                        prefix="Poruka"
+                        field="message"
+                        errors={state.errors}
+                        className="text-sm text-red-500 mt-1"
+                      />
                     </div>
 
                     <button
                       type="submit"
-                      disabled={isSubmitting}
+                      disabled={state.submitting}
                       className="btn-accent w-full gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      {isSubmitting ? (
+                      {state.submitting ? (
                         "Slanje..."
                       ) : (
                         <>
