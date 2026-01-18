@@ -37,7 +37,18 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Kontakt - Webino</title>
+        <title>Kontakt | Webino - Zatražite besplatnu ponudu</title>
+        <meta
+          name="description"
+          content="Kontaktirajte Webino tim za besplatnu konsultaciju. Pošaljite upit za izradu web sajta ili nas pozovite. Odgovaramo u najkraćem roku."
+        />
+        <link rel="canonical" href="https://webino.rs/kontakt" />
+        <meta property="og:url" content="https://webino.rs/kontakt" />
+        <meta property="og:title" content="Kontakt | Webino" />
+        <meta
+          property="og:description"
+          content="Kontaktirajte nas za besplatnu konsultaciju. Javićemo vam se u najkraćem roku."
+        />
       </Head>
       <Layout>
         {/* Hero */}

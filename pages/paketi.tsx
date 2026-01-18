@@ -4,6 +4,7 @@ import Layout from "@/components/layout/Layout";
 import { ArrowRight } from "lucide-react";
 import { packages } from "@/shared/packages";
 import { PricingCard } from "@/components/pricing/PricingCard";
+import { prices } from "@/shared/prices";
 
 const faqs = [
   {
@@ -32,7 +33,18 @@ export default function Packages() {
   return (
     <>
       <Head>
-        <title>Paketi - Webino</title>
+        <title>Paketi i cene | Webino - Web dizajn Srbija</title>
+        <meta
+          name="description"
+          content={`Pogledajte naše pakete za izradu web sajtova. Basic od ${prices.basic.discountedPrice}€, Standard od ${prices.standard.discountedPrice}€ i Custom paketi. Domen, hosting i SSL uključeni u cenu. Bez skrivenih troškova.`}
+        />
+        <link rel="canonical" href="https://webino.rs/paketi" />
+        <meta property="og:url" content="https://webino.rs/paketi" />
+        <meta property="og:title" content="Paketi i cene | Webino" />
+        <meta
+          property="og:description"
+          content={`Izaberite paket koji odgovara vašim potrebama. Basic od ${prices.basic.discountedPrice}€, Standard od ${prices.standard.discountedPrice}€. Domen i hosting uključeni.`}
+        />
       </Head>
       <Layout>
         {/* Hero */}

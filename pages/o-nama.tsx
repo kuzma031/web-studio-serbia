@@ -34,7 +34,18 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>O nama - Webino</title>
+        <title>O nama | Webino - Tim za izradu web sajtova</title>
+        <meta
+          name="description"
+          content="Upoznajte Webino tim. Pomažemo malim lokalnim biznisima u Srbiji da naprave profesionalne web sajtove po pristupačnim cenama."
+        />
+        <link rel="canonical" href="https://webino.rs/o-nama" />
+        <meta property="og:url" content="https://webino.rs/o-nama" />
+        <meta property="og:title" content="O nama | Webino" />
+        <meta
+          property="og:description"
+          content="Webino je tim entuzijasta koji veruje da svaki lokalni biznis zaslužuje profesionalan web sajt."
+        />
       </Head>
       <Layout>
         {/* Hero */}
