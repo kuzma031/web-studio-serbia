@@ -23,9 +23,8 @@ const HeroSection = () => {
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-slide-up"
             style={{ animationDelay: "0.1s" }}
           >
-            Izrađujemo moderne, brze i responzivne sajtove za frizerske salone,
-            restorane, ordinacije, fitnes studije i druge male biznise u Srbiji.
-            <br />
+            Izrađujemo moderne, brze i responzivne sajtove za restorane, ordinacije, frizerske salone,
+            fitnes studije i druge male biznise u Srbiji. Domen i hosting uključeni u cenu.
             <span className="font-semibold text-foreground">
               {" "}
               Cene već od{" "}

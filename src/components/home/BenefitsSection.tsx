@@ -14,7 +14,7 @@ const benefits = [
   {
     icon: Clock,
     title: "Brza izrada",
-    description: "Jednostavan sajt možete dobiti za samo 7 dana. Bez čekanja, bez komplikacija.",
+    description: "Jednostavan sajt možete dobiti za samo nekoliko dana. Bez čekanja, bez komplikacija.",
   },
   {
     icon: TrendingUp,
