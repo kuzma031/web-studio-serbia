@@ -58,20 +58,20 @@
     --background: 222 47% 6%;
     --foreground: 210 40% 98%;
 
-    --card: 222 47% 8%;
+    --card: 222 47% 10%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222 47% 8%;
+    --popover: 222 47% 10%;
     --popover-foreground: 210 40% 98%;
 
     --primary: 217 91% 60%;
-    --primary-foreground: 222 47% 6%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 217 33% 17%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted-foreground: 215 20% 70%;
 
     --accent: 24 95% 58%;
     --accent-foreground: 0 0% 100%;
@@ -79,9 +79,19 @@
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
     --ring: 217 91% 60%;
+
+    --hero-gradient-soft: linear-gradient(
+      135deg,
+      hsl(222 47% 8%) 0%,
+      hsl(230 40% 12%) 100%
+    );
+    --card-shadow: 0 4px 6px -1px hsl(0 0% 0% / 0.3),
+      0 2px 4px -2px hsl(0 0% 0% / 0.2);
+    --card-shadow-hover: 0 20px 25px -5px hsl(0 0% 0% / 0.4),
+      0 8px 10px -6px hsl(0 0% 0% / 0.3);
   }
 }
 
@@ -164,6 +174,10 @@
 
   .btn-white {
     @apply inline-flex items-center justify-center px-6 py-3 bg-white text-primary font-semibold rounded-lg transition-all duration-200 shadow-lg;
+  }
+
+  .dark .btn-white {
+    @apply bg-background text-primary;
   }
 
   .btn-white:hover {

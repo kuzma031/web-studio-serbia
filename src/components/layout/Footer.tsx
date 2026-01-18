@@ -4,7 +4,7 @@ import { contact } from "@/shared/prices";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-background">
+    <footer className="bg-card border-t border-border text-foreground">
       <div className="section-container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
@@ -17,7 +17,7 @@ const Footer = () => {
               </div>
               <span className="text-xl font-bold">Webino</span>
             </div>
-            <p className="text-background/70 text-sm leading-relaxed">
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Izrađujemo moderne i pristupačne sajtove za male lokalne biznise u
               Srbiji. Vaš uspeh online počinje ovde.
             </p>
@@ -30,7 +30,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/o-nama"
-                  className="text-background/70 hover:text-background text-sm transition-colors"
+                  className="text-muted-foreground hover:text-foreground text-sm transition-colors"
                 >
                   O nama
                 </Link>
@@ -38,7 +38,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/paketi"
-                  className="text-background/70 hover:text-background text-sm transition-colors"
+                  className="text-muted-foreground hover:text-foreground text-sm transition-colors"
                 >
                   Paketi
                 </Link>
@@ -46,7 +46,7 @@ const Footer = () => {
               {/* <li>
                 <Link
                   href="/portfolio"
-                  className="text-background/70 hover:text-background text-sm transition-colors"
+                  className="text-muted-foreground hover:text-foreground text-sm transition-colors"
                 >
                   Portfolio
                 </Link>
@@ -54,7 +54,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/kontakt"
-                  className="text-background/70 hover:text-background text-sm transition-colors"
+                  className="text-muted-foreground hover:text-foreground text-sm transition-colors"
                 >
                   Kontakt
                 </Link>
@@ -66,12 +66,12 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Usluge</h4>
             <ul className="space-y-3">
-              <li className="text-background/70 text-sm">Web dizajn</li>
-              <li className="text-background/70 text-sm">
+              <li className="text-muted-foreground text-sm">Web dizajn</li>
+              <li className="text-muted-foreground text-sm">
                 Responzivni sajtovi
               </li>
-              <li className="text-background/70 text-sm">SEO optimizacija</li>
-              <li className="text-background/70 text-sm">Web aplikacije</li>
+              <li className="text-muted-foreground text-sm">SEO optimizacija</li>
+              <li className="text-muted-foreground text-sm">Web aplikacije</li>
             </ul>
           </div>
 
@@ -79,25 +79,25 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Kontakt</h4>
             <ul className="space-y-3">
-              <li className="flex items-center gap-3 text-background/70 text-sm">
+              <li className="flex items-center gap-3 text-muted-foreground text-sm">
                 <Mail size={16} />
                 <a
                   href={`mailto:${contact.email}`}
-                  className="hover:text-background transition-colors"
+                  className="hover:text-foreground transition-colors"
                 >
                   {contact.email}
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-background/70 text-sm">
+              <li className="flex items-center gap-3 text-muted-foreground text-sm">
                 <Phone size={16} />
                 <a
                   href={`tel:${contact.phone}`}
-                  className="hover:text-background transition-colors"
+                  className="hover:text-foreground transition-colors"
                 >
                   {contact.phone}
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-background/70 text-sm">
+              <li className="flex items-center gap-3 text-muted-foreground text-sm">
                 <MapPin size={16} />
                 <span>{contact.address}</span>
               </li>
@@ -105,8 +105,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-background/10 mt-12 pt-8 text-center">
-          <p className="text-background/50 text-sm">
+        <div className="border-t border-border mt-12 pt-8 text-center">
+          <p className="text-muted-foreground text-sm">
             © {new Date().getFullYear()} Webino. Sva prava zadržana.
           </p>
         </div>
