@@ -9,12 +9,12 @@ const HeroSection = () => {
     <section className="hero-gradient-bg section-padding">
       <div className="section-container">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-primary text-sm font-medium mb-6 animate-fade-in border border-border bg-background/60 backdrop-blur">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             Profesionalni web sajtovi za lokalne biznise
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 animate-slide-up">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.03] mb-6 animate-slide-up tracking-tight">
             Vaš biznis zaslužuje
             <span className="gradient-text block">moderan sajt</span>
           </h1>
